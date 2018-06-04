@@ -150,7 +150,7 @@ GWAS_scan <- function(gp, trait = 1, model = "kinship", thre_cof = 6, win_cof,
   } else {
 
     trait.names <- attr(gp$pheno, "dimnames")[[2]]
-    pheno <- gp$pheno[, 1, which(trait %in% trait.names)]
+    pheno <- gp$pheno[, 1, which(trait.names == trait)]
 
   }
 
